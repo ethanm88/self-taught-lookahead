@@ -1,4 +1,4 @@
-# Self-Taught-Lookahead
+# Self-Taught Lookahead
 Repository for [Language Models can Self-Improve at State-Value Estimation for Better Search](https://arxiv.org/pdf/2503.02878)
 
 Code and data coming soon!
@@ -13,5 +13,4 @@ Code and data coming soon!
       primaryClass={cs.LG},
       url={https://arxiv.org/abs/2503.02878}, 
 }
-
 ```
