@@ -1,0 +1,41 @@
+# Bytecode and Caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# W&B (Weights & Biases)
+wandb/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+venv.bak/
+.env.bak/
+
+# IDE / Editor Settings
+.vscode/
+.idea/
+
+# Build & Distribution Artifacts
+build/
+dist/
+*.egg-info/
+*.whl
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Environment Variable Files
+.env
+
+# Installer Logs
+pip-log.txt
+pip-delete-this-directory.txt

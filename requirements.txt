@@ -1,0 +1,9 @@
+accelerate==1.4.0
+vllm
+wandb==0.19.9
+transformers==4.49.0
+triton==3.3.0
+trl==0.14.0
+unsloth==2025.1.1
+unsloth-zoo==2025.1.1
+huggingface-hub==0.34.1
