@@ -7,7 +7,7 @@ from unsloth.chat_templates import get_chat_template
 from datasets import Dataset
 from tqdm import tqdm
 parser = argparse.ArgumentParser()
-parser.add_argument('--training_data_dir', type=str, default='/data/emendes3/lookahead_tuning/LanguageAgentTreeSearch/hotpot_lookahead/training_data')
+parser.add_argument('--training_data_dir', type=str, default='improvement_data')
 parser.add_argument('--iteration', type=int, default=0)
 parser.add_argument('--ratio', type=float, default=1.0)
 parser.add_argument('--split', type=float, default=0.1)

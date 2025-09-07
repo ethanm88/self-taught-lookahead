@@ -31,7 +31,7 @@ for (( i=1; i<=MAX_DEPTH; i++ )); do
     echo current_value_model $current_value_model
     tmux new-session -d -s "stl_value_model" \
     "source ~/miniconda3/etc/profile.d/conda.sh && \
-    conda activate lookahead_tuning && \
+    conda activate stl && \
     CUDA_VISIBLE_DEVICES=${DEVICE} \
     vllm serve '${current_value_model}' --dtype auto \
     --api-key jackets --trust-remote-code \
