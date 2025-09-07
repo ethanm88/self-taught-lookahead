@@ -39,8 +39,6 @@ for (( i=1; i<=MAX_DEPTH; i++ )); do
     --gpu-memory-utilization 0.97 \
     --port=${port} ; bash"
 
-    echo "tmux new-session -d -s \"stl_value_model\" \"source ~/miniconda3/etc/profile.d/conda.sh && conda activate lats_new && CUDA_VISIBLE_DEVICES=${DEVICE} vllm serve '${current_value_model}' --dtype auto --api-key jackets --trust-remote-code --max_model_len=8192 --gpu-memory-utilization 0.97 --port=${port} ; bash\""
-
     sleep 20
 
     # Run eval

@@ -25,9 +25,9 @@ args = parser.parse_args()
 def prepare_training_data(depth):
     tokenizer = get_chat_template(
         get_llama_tokenizer(),
-        chat_template = "chatml", # Supports zephyr, chatml, mistral, llama, alpaca, vicuna, vicuna_old, unsloth
-        mapping = {"role" : "from", "content" : "value", "user" : "human", "assistant" : "gpt"}, # ShareGPT style
-        map_eos_token = True, # Maps <|im_end|> to </s> instead
+        chat_template = "chatml",
+        mapping = {"role" : "from", "content" : "value", "user" : "human", "assistant" : "gpt"},
+        map_eos_token = True,
     )
     def formatting_prompts_func(examples):
         convos = examples["conversations"]
@@ -80,10 +80,10 @@ if __name__ == '__main__':
         ratio_str = str(args.ratio).replace('.', '')
         
         # train the model
-        base_dir = f"/data/emendes3/lookahead_tuning/LanguageAgentTreeSearch/hotpot_lookahead/value_models"
-        checkpoint_dir = os.path.join(base_dir, f"checkpoints/model_{args.model_name}_{args.backend}_{args.iteration}_{ratio_str}_start={args.start_idx}_num_samples={args.num_samples}_depth={depth}_{LOSS_FOR_SAVE}")
-        logging_dir = os.path.join(base_dir, f"logs/model_{args.model_name}_{args.backend}_{args.iteration}_{ratio_str}_start={args.start_idx}_num_samples={args.num_samples}_depth={depth}_{LOSS_FOR_SAVE}")
-        save_dir = os.path.join(base_dir, f"model_{args.model_name}_{args.backend}_{args.iteration}_{ratio_str}_start={args.start_idx}_num_samples={args.num_samples}_depth={depth}_{LOSS_FOR_SAVE}")
+        BASE_DIR = f"stl_value_models"
+        checkpoint_dir = os.path.join(BASE_DIR, f"checkpoints/model_{args.model_name}_{args.backend}_{args.iteration}_{ratio_str}_start={args.start_idx}_num_samples={args.num_samples}_depth={depth}_{LOSS_FOR_SAVE}")
+        logging_dir = os.path.join(BASE_DIR, f"logs/model_{args.model_name}_{args.backend}_{args.iteration}_{ratio_str}_start={args.start_idx}_num_samples={args.num_samples}_depth={depth}_{LOSS_FOR_SAVE}")
+        save_dir = os.path.join(BASE_DIR, f"model_{args.model_name}_{args.backend}_{args.iteration}_{ratio_str}_start={args.start_idx}_num_samples={args.num_samples}_depth={depth}_{LOSS_FOR_SAVE}")
         
         os.makedirs(checkpoint_dir, exist_ok=True)
         os.makedirs(logging_dir, exist_ok=True)
